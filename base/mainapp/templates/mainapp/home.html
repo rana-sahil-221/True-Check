@@ -1,0 +1,110 @@
+<html>
+  <head>
+    <title>Welcome to True Check</title>
+    <link rel="icon" type="image/x-icon" href="%static 'true_check_logo_1.png'%">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+      #landing
+      {
+        background-image: url('/static/home_back.jpg');
+        background-size: 100% 100%;
+        height: 650px;
+      }
+      #button
+      {
+        background-color:#0B0B45;
+        color: #C5B358;
+        border-top-left-radius:15px;
+        border-bottom-right-radius: 15px;
+        padding: 8px;
+        width: 120px;
+        border-style: none;
+        outline-style: none;
+        font-size: 18px;
+      }
+    </style>
+  </head>
+  <body>
+    {% load static %} 
+      <nav class="navbar navbar-expand-lg navbar-light" style="background-color:#0B0B45;">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+          <a class="navbar-brand" href="/home"><img src="{% static 'true_check_logo_1.png'%}" width='100' height='50'/></a>
+          <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="/home" style="color: #C5B358;">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" style="color: #C5B358;">Link</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" style="color: #C5B358;">Disabled</a>
+            </li>
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+          </form>
+        </div>
+      </nav>
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-sm-5" style="height:650px; padding:80px; font-family:'Times in new roman';">
+            <h1>We build trust over which company relies.</h1>
+            <div class="row" style="margin-top:70px;">
+              <div class="col-sm-6">
+                <h3 style="margin-bottom:20px;">For Companies</h4>
+                <h5 style="margin-bottom:25px;">We are a leading surveying platform to get the best they are searching for.</h5>
+                <a href="/company"><input type="button" value="Sign Up"  id="button"/></a>
+              </div>
+              <div class="col-sm-6">
+                <h3 style="margin-bottom:20px;">For Customers</h4>
+                <h5 style="margin-bottom:25px;">We are a hub to get the best suited products they are searching for.</h5>
+                <a href="/customer"><input type="button" value="Sign Up" id="button" /></a>
+              </div>
+            </div>
+            <p style="margin-top:100px;">Copyright &copy;2022 Truecheck | <a href="#" style="text-decoration:none; color:black;">Careers</a> | <a href="#" style="text-decoration:none; color:black;">Privacy Policy</a></p>
+          </div>
+          <div class="col-sm-7" id="landing">
+          </div>
+        </div>
+      </div>
+<style>
+  #foot
+  {
+      text-decoration: none;
+      color:#C5B358;
+      height:auto;
+      width: auto;
+      padding: 10px;
+      font-size: 24px;
+      margin: 10px;
+      border: 1px solid #C5B358;
+      border-radius: 10px;
+  }
+</style>
+
+
+      <div class="container-fluid">
+        <div class="row" style="background-color: #0B0B45; padding:50px;">
+          <div class="col-sm-4"></div>
+          <div class="col-sm-4">
+            <a href="#" id="foot" style="padding-left:14px; padding-right:14px"><i class="fa fa-facebook"></i></a>
+            <a href="#" id="foot"><i class="fa fa-google"></i></a>
+            <a href="#" id="foot"><i class="fa fa-linkedin"></i></a>
+            <a href="#" id="foot"><i class="fa fa-instagram"></i></a>
+            <a href="#" id="foot"><i class="fa fa-github"></i></a>
+          </div>
+          <div class="col-sm-4"></div>
+        </div>
+        <div class="row">
+        </div>
+      </div>
+  </body>
+</html>
