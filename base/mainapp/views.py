@@ -1,16 +1,37 @@
 from django.shortcuts import render,redirect
-from django.http import HttpResponse
+from django.http import HttpResponse,request
 from django.contrib import messages
 from django.contrib.auth import authenticate,login,logout
 from django.contrib.auth.models import User
-
-
+from mainapp.models import Contact
+from datetime import datetime
 def home(request):
     return render(request,'mainapp/home.html')
 
 def customer(request):
     return render(request,'mainapp/demo-custom.html')
 
+def company(request):
+    return render(request,'mainapp/company.html')
+
+def contactus(request):
+    if request.method == 'POST':
+        email = request.POST.get('email')
+        msg = request.POST.get('msg')
+        contact =  Contact(email=email,msg=msg,date=datetime.today())
+        contact.save()
+        messages.success(request,'Form has been submitted Successfully!')
+    return render(request,'mainapp/contactus.html')
+''''    
+def contact(reqeust):
+    if request.method == 'POST':
+        email = request.POST.get('email')
+        msg = request.POST.get('msg')
+        contact =  Contact(email=email,msg=msg,date=datetime.today())
+        contact.save()
+        messages.success(request,'Form has been submitted Successfully!')
+    return render(request,'mainappp/contactus.html')
+'''
 def signup(request):
     if request.method == "POST":
         username = request.POST.get("name")
